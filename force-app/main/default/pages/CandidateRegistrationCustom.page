@@ -1,0 +1,25 @@
+<apex:page controller="CandidateController" >
+  <apex:form >
+    <apex:pageBlock title="Candidate_Poojan Edit" >
+      <apex:pageBlockSection title="Information" columns="1">
+        <apex:inputField value="{!candidate.Salutation__c }"/>
+        <apex:inputField value="{!candidate.First_Name__c }"/>
+        <apex:inputField value="{!candidate.Last_Name__c }"/>
+        <!--<apex:inputField value="{!Candidate_Poojan__c.Full_Name__c}"/>-->
+        <apex:inputField value="{!candidate.DOB__c}"/>
+        <!--<apex:inputField value="{!Candidate_Poojan__c.Age__c}"/>-->
+        <apex:inputField value="{!candidate.Email__c}"/>
+        <apex:inputField value="{!candidate.Country__c}"/>
+        <apex:inputField value="{!candidate.State__c}"/>
+        <apex:inputField value="{!candidate.Application_Date__c}"/>
+        <apex:inputField value="{!candidate.Status__c}"/>
+        <apex:inputField value="{!candidate.Expected_Salary__c}"/>
+        <apex:inputField value="{!candidate.Job__c}"/>
+      </apex:pageBlockSection>
+      <apex:pageBlockButtons >
+          <apex:commandButton value="Save" action="{!save}"/>
+          <apex:commandButton value="Edit" action="{!edit}"/>
+      </apex:pageBlockButtons>  
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:component >
+    <apex:attribute name="crecords" type="sObject[]" required="true" description=""/>
+    <apex:attribute name="cfields" type="string[]" required="true" description=""/>
+    <table border="2" >
+    <apex:repeat var="item" value="{!crecords}">
+    <tr>
+    <apex:repeat var="fieldItem" value="{!cfields}">
+    <td>{!item[fieldItem]}</td>
+    </apex:repeat>
+    </tr>
+    </apex:repeat>
+    </table>
+</apex:component>

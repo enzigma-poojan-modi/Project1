@@ -1,0 +1,30 @@
+<apex:page controller="JobController" sidebar="false" showHeader="false" id="page">
+    <div class="image">
+        <apex:image url="{!URLFOR($Resource.Application_Image)}" />
+    </div>   
+    <apex:stylesheet value="{!$Resource.Application_CSS}"/>  
+    <div class="form">
+        <apex:form id="form">            
+            <apex:pageBlock title="Job_Poojan Edit" id="pageBlock"> 
+                <div class="pbSection">
+                    <apex:pageBlockSection title="Information"  collapsible="false" id="pbSection">
+                        <apex:inputField value="{!job.Description__c}" id="desc" />
+                        <apex:inputField value="{!job.Number_of_Positions__c}" id="postion" />
+                        <apex:inputField value="{!job.Expires_On__c}" id="expires" />
+                        <apex:inputField value="{!job.Active__c}"/>
+                        <apex:inputField value="{!job.Salary_Offered__c}" id="salary" />
+                        <apex:inputField value="{!job.Manager__c}" id="manager" />
+                        <apex:inputField value="{!job.Job_Type__c}" id="type" />
+                        <apex:inputField value="{!job.Required_Skills__c}" id="skills" />
+                        <apex:inputField value="{!job.Qualification_Required__c}" id="qualification" />
+                        <apex:inputField value="{!job.Certification_Required__c}" id="certificate"/>
+                    </apex:pageBlockSection>            
+                </div>
+                <div class="buttons">
+                    <apex:commandButton value="Save & Next" action="{!save}"/>
+                    <apex:commandButton value="Edit" action="{!edit}"/> 
+                </div>                          
+            </apex:pageBlock>            
+        </apex:form> 
+    </div>
+</apex:page>

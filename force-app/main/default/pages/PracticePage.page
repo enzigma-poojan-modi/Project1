@@ -1,0 +1,16 @@
+<apex:page title="Practice ">
+    <apex:form >
+    <apex:pageBlock title="Block1">
+        <apex:pageBlockSection title="Section1" >
+            
+           <apex:outputLabel value="Enter Name"></apex:outputLabel>  <apex:inputText id="Name" /><br/>
+            Enter Age <apex:inputSecret id="Age" /><br/>
+            <div align = 'Left'>
+                <apex:commandButton value="Save"/>
+            </div>
+            
+    	</apex:pageBlockSection>
+	</apex:pageBlock>
+    </apex:form>
+    
+</apex:page>
